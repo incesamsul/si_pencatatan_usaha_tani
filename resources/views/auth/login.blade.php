@@ -39,7 +39,7 @@
                             <img src="{{ asset('img/png/white.png') }}" width="100">
                         </div>
 
-                        <div class="card card-danger">
+                        <div class="card card-main">
                             <div class="card-header">
                                 <h4>Login</h4>
                             </div>
@@ -84,8 +84,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <button name="signIn" type="submit" class="btn btn-danger btn-lg btn-block"
-                                            tabindex="4">
+                                        <button name="signIn" type="submit"
+                                            class="btn bg-main text-white btn-lg btn-block" tabindex="4">
                                             Login
                                         </button>
                                     </div>
@@ -94,7 +94,7 @@
                             </div>
                         </div>
                         <div class="simple-footer">
-                            Copyright &copy; <a href="https://samtam.tech">samtam.tech</a>
+                            Copyright &copy;
                         </div>
                     </div>
                 </div>

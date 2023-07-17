@@ -26,7 +26,7 @@ body {
 }
 
 .card.kategori.active {
-    border: 1px solid #FC544B;
+    border: 1px solid #00C6A9;
     background-color: #a54e3114;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .card.kategori:hover {
-    border: 1px solid #FC544B;
+    border: 1px solid #00C6A9;
     background-color: #a54e3114;
 }
 
@@ -82,7 +82,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #FC544B !important;
+    color: #00C6A9 !important;
 }
 
 .navbar-bg {
@@ -90,19 +90,19 @@ h6 {
 }
 
 .text-main {
-    color: #FC544B !important;
+    color: #00C6A9 !important;
 }
 
 .bg-main {
-    background-color: #FC544B;
+    background-color: #00C6A9;
 }
 
 .bg-main:hover {
-    background-color: #a63535 !important;
+    background-color: #009c84 !important;
 }
 
 .bg-main:focus {
-    background-color: #a63535 !important;
+    background-color: #009c84 !important;
 }
 
 textarea {
@@ -126,7 +126,7 @@ body.show-spinner>main {
 
 
 .sidebar-menu li a i {
-    color: #ff9898 !important;
+    color: #009c84 !important;
     font-size: 20px;
 }
 
@@ -145,11 +145,11 @@ body.show-spinner>main {
 .sidebar-menu li.active a.nav-link {
     font-size: 14px !important;
     border-radius: 15px !important;
-    color: #FC544B !important;
+    color: #00C6A9 !important;
 }
 
 .sidebar-mini li.active a.nav-link {
-    background-color: #FC544B !important;
+    background-color: #00C6A9 !important;
     box-shadow: none !important;
     color: white !important;
 }
@@ -248,7 +248,7 @@ ul.timeline>li:before {
 /* my background color */
 
 .bg-soft-danger {
-    background-color: #fc544b11 !important;
+    background-color: #00C6A911 !important;
 }
 
 .bg-soft-primary {

@@ -1,7 +1,7 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">based</a>
+            <a href="index.html">Si usaha tani</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">St</a>
@@ -30,7 +30,7 @@
 
                 <li class="" id="liBantuan"><a class="nav-link" href="{{ URL::to('/admin/pengguna') }}"><i
                             class="far fa-id-card"></i> <span>Anggota petani</span></a></li>
-
+                {{--
                 <li class="" id="liBantuan"><a class="nav-link" href="{{ URL::to('/admin/pengguna') }}"><i
                             class="far fa-folder"></i> <span>Daftar permintaan</span></a></li>
 
@@ -38,13 +38,46 @@
                             class="far fa-file-alt"></i> <span>Riwayat pengeluaran</span></a></li>
 
                 <li class="" id="liBantuan"><a class="nav-link" href="{{ URL::to('/admin/pengguna') }}"><i
-                            class="far fa-folder-open"></i> <span>laporan modal</span></a></li>
+                            class="far fa-folder-open"></i> <span>laporan modal</span></a></li> --}}
 
 
 
                 {{-- END OF MENU ADMIN --}}
             @endif
 
+
+            @if (auth()->user()->role == 'petani')
+                {{-- MENU ADMIN --}}
+                <li class="menu-header">Petani</li>
+
+                <li class="" id="liKebutuhanPertanian"><a class="nav-link"
+                        href="{{ URL::to('/petani/kebutuhan_pertanian') }}"><i class="far fa-folder-open"></i>
+                        <span>Kebutuhan Pertanian</span></a></li>
+
+
+                <li class="" id="limodal"><a class="nav-link" href="{{ URL::to('/petani/modal') }}"><i
+                            class="far fa-folder"></i>
+                        <span>Informasi modal </span></a></li>
+
+                {{-- END OF MENU ADMIN --}}
+            @endif
+
+
+            @if (auth()->user()->role == 'investor')
+                {{-- MENU ADMIN --}}
+                <li class="menu-header">investor</li>
+
+                <li class="" id="liModal"><a class="nav-link" href="{{ URL::to('/investor/modal') }}"><i
+                            class="far fa-folder"></i>
+                        <span>Informasi modal </span></a></li>
+
+                <li class="" id="liKebutuhanPertanian"><a class="nav-link"
+                        href="{{ URL::to('/investor/kebutuhan_pertanian') }}"><i class="far fa-folder-open"></i>
+                        <span>Kebutuhan Pertanian</span></a></li>
+
+
+                {{-- END OF MENU ADMIN --}}
+            @endif
 
 
 
