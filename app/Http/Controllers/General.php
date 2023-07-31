@@ -29,6 +29,15 @@ class General extends Controller
         return view('pages.profile.index', $data);
     }
 
+    public function updateUserProfile(Request $request)
+    {
+        User::where('id', auth()->user()->id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+        ]);
+        return redirect()->back()->with('message', 'profile Berhasil di update');
+    }
+
     public function bantuan()
     {
         return view('pages.bantuan.index');

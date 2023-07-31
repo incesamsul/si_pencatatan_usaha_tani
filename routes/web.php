@@ -43,6 +43,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator,investor,petani']
 
     Route::get('/dashboard', [General::class, 'dashboard']);
     Route::get('/profile', [General::class, 'profile']);
+    Route::post('/update_user_profile', [General::class, 'updateUserProfile']);
     Route::get('/bantuan', [General::class, 'bantuan']);
 
     Route::post('/ubah_foto_profile', [General::class, 'ubahFotoProfile']);

@@ -12,7 +12,7 @@
                                 alt="" class="rounded-circle mb-2" width="100">
                             <div class="media-title"></div>
                             <div class="font-weight-600 text-muted text-small"></div>
-                            <div class="font-weight-600 text-muted text-small">User</div>
+                            <div class="font-weight-600 text-muted text-small">{{ auth()->user()->name }}</div>
                         </div>
                     </li>
                     <li class="media">
@@ -40,7 +40,8 @@
                     <li class="media">
                         <div class="media-body">
                             <div class="float-right">
-                                <div class="font-weight-600 text-muted text-small">03-09-2018</div>
+                                <div class="font-weight-600 text-muted text-small">{{ auth()->user()->created_at }}
+                                </div>
                             </div>
                             <div class="media-title">Tanggal Dibuat</div>
                         </div>
@@ -86,53 +87,55 @@
                                     alt="" class="rounded-circle mb-2" width="200">
                                 <div class="media-title"></div>
                                 <div class="font-weight-600 text-muted text-small"></div>
-                                <div class="font-weight-600 text-muted text-small">User</div>
+                                <div class="font-weight-600 text-muted text-small">{{ auth()->user()->name }}</div>
                             </div>
                         </li>
-                        <li class="media">
-                            <div class="media-body">
-                                @if ($user)
-                                    <table class="table table-striped">
-                                        <tr>
-                                            <td class="bg-soft-primary">Nama</td>
-                                            <td>{{ $user->name }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="bg-soft-primary">Jensi Kelamin</td>
-                                            <td>{{ $user->jenis_kelamin }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="bg-soft-primary">Tempat Dan Tanggal Lahir</td>
-                                            <td>{{ $user->tempat_lahir . '  ' . $user->tanggal_lahir }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="bg-soft-primary">Alamat</td>
-                                            <td>{{ $user->alamat }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="bg-soft-primary">Telepon</td>
-                                            <td>{{ $user->no_telp }}</td>
-                                        </tr>
-                                    </table>
-                                    <div class="alert alert-info">silahkan hubungi admin jika terdapat kesalahan data
-                                    </div>
-                                @else
-                                    <div class="alert alert-warning">Belum ada data user, untuk lebih lanjut hubungi
-                                        admin</div>
-                                @endif
-                            </div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body">
-                                <a href="" class="btn bg-main text-white btn-lg btn-block btn-icon-split"
-                                    data-toggle="modal" data-target="#modal">
-                                    <i class="fas fa-camera"></i> Ganti Foto Profile
-                                </a>
-                                {{-- <a href="" class="btn bg-main text-white btn-lg btn-block btn-icon-split">
+                        <form action="{{ URL::to('/update_user_profile') }}" method="POST">
+                            @csrf
+                            <li class="media">
+                                <div class="media-body">
+                                    @if ($user)
+                                        <table class="table table-striped">
+                                            <tr>
+                                                <td class="bg-soft-primary">Nama</td>
+                                                <td><input type="text" class="form-control"
+                                                        value="{{ $user->name }}" name="name">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-soft-primary">email</td>
+                                                <td><input type="text" class="form-control"
+                                                        value="{{ $user->email }}" name="email">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-soft-primary">role</td>
+                                                <td><input readonly type="text" class="form-control"
+                                                        value="{{ $user->role }}" name="role">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        {{-- <div class="alert alert-info">silahkan hubungi admin jika terdapat kesalahan data
+                                    </div> --}}
+                                    @else
+                                        {{-- <div class="alert alert-warning">Belum ada data user, untuk lebih lanjut hubungi
+                                        admin</div> --}}
+                                    @endif
+                                </div>
+                            </li>
+                            <li class="media">
+                                <div class="media-body">
+                                    <button type="submit"
+                                        class="btn bg-main text-white btn-lg btn-block btn-icon-split">
+                                        <i class="fas fa-save"></i>
+                                        Simpan</button>
+
+                                    {{-- <a href="" class="btn bg-main text-white btn-lg btn-block btn-icon-split">
                                     <i class="fas fa-pen"></i> Edit Biodata
                                 </a>  --}}
-                            </div>
-                        </li>
+                                </div>
+                            </li>
+                        </form>
                     </ul>
                 </div>
             </div>

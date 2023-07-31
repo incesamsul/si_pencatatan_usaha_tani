@@ -16,8 +16,8 @@
             <li class="" id="liProfile"><a class="nav-link" href="{{ URL::to('/profile') }}"><i
                         class="far fa-user"></i>
                     <span>Profile</span></a></li>
-            <li class="" id="liBantuan"><a class="nav-link" href="{{ URL::to('/bantuan') }}"><i
-                        class="far fa-question-circle"></i> <span>Bantuan</span></a></li>
+            {{-- <li class="" id="liBantuan"><a class="nav-link" href="{{ URL::to('/bantuan') }}"><i
+                        class="far fa-question-circle"></i> <span>Bantuan</span></a></li> --}}
 
 
 
