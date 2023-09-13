@@ -27,7 +27,13 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                    $total = 0;
+                                @endphp
                                 @foreach ($modal as $row)
+                                    @php
+                                        $total += $row->jumlah;
+                                    @endphp
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>Rp. {{ number_format($row->jumlah) }}</td>
@@ -47,6 +53,12 @@
                                     </tr>
                                 @endforeach
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total : </th>
+                                    <th>Rp. {{ number_format($total) }}</th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>

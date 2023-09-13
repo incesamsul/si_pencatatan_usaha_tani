@@ -36,6 +36,7 @@ class KebutuhanPertanianController extends Controller
     {
         KebutuhanPertanian::create([
             'name' => $request->name,
+            'qty' => $request->qty,
             'user_id' => auth()->user()->id,
         ]);
         return redirect('/petani/kebutuhan_pertanian')->with('message', 'data Berhasil di tambahkan');
@@ -48,6 +49,7 @@ class KebutuhanPertanianController extends Controller
         ])->first();
         $data->update([
             'name' => $request->name,
+            'qty' => $request->qty,
             'user_id' => auth()->user()->id,
         ]);
         return redirect('/petani/kebutuhan_pertanian')->with('message', 'data Berhasil di update');

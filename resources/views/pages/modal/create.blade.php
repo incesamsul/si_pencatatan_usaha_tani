@@ -34,7 +34,7 @@
                                 <textarea class="form-control" name="keterangan" id="keterangan" cols="30" rows="10">{{ $edit ? $edit->keterangan : '' }}</textarea>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-danger">Simpan</button>
+                                <button type="submit" class="btn bg-main text-white">Simpan</button>
                             </div>
                         </form>
                     </div>

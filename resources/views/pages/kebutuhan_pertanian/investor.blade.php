@@ -18,6 +18,7 @@
                                 <tr>
                                     <th>#</th>
                                     <td>kebutuhan</td>
+                                    <td>jumlah</td>
                                     <td>nama petani</td>
                                 </tr>
                             </thead>
@@ -26,6 +27,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $row->name }}</td>
+                                        <td>{{ $row->qty }}</td>
                                         <td>{{ $row->petani->name }}</td>
                                     </tr>
                                 @endforeach

@@ -114,6 +114,24 @@
                                                         value="{{ $user->role }}" name="role">
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td class="bg-soft-primary">jenis kelamin</td>
+                                                <td><input type="text" class="form-control" value="laki-laki"
+                                                        name="role">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-soft-primary">no hp</td>
+                                                <td><input type="text" class="form-control" value="0895324670360"
+                                                        name="role">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-soft-primary">alamat</td>
+                                                <td><input type="text" class="form-control" value="makassar"
+                                                        name="role">
+                                                </td>
+                                            </tr>
                                         </table>
                                         {{-- <div class="alert alert-info">silahkan hubungi admin jika terdapat kesalahan data
                                     </div> --}}

@@ -22,6 +22,7 @@
                                 <tr>
                                     <th>#</th>
                                     <td>kebutuhan</td>
+                                    <td>Jumlah</td>
                                     <td>Aksi</td>
                                 </tr>
                             </thead>
@@ -30,6 +31,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $row->name }}</td>
+                                        <td>{{ $row->qty }}</td>
                                         <td>
                                             <a href="{{ URL::to('/petani/kebutuhan_pertanian/edit/' . $row->id) }}"
                                                 class="btn btn-primary">Edit</a>
